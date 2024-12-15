@@ -4,9 +4,20 @@ import CTA from "./CTA"
 import ME from "../../assets/me.png"
 import HeaderSocial from './HeaderSocial'
 
+import useTheme from '../hocks/useTheme'
+
 const Header = () => {
+    const { theme, toggleTheme } = useTheme();
+  
   return (
     <header>
+
+<div>
+      <button className='btn btn-primary' onClick={toggleTheme}>
+        Switch to {theme === "light" ? "Dark" : "Light"} Mode
+      </button>
+      {/* Portfolio content here */}
+    </div>
 
       <div className="container header__container">
         <h5>Hello I'm </h5>
